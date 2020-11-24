@@ -3,10 +3,9 @@ import MovieCard from './MovieCard';
 
 const MovieList = () => {
   return (
-    <div>
-      MovieList here
+    <ul>
       {[1, 2, 3].map(item => (<MovieCard key={item} />))}
-    </div>
+    </ul>
   )
 }
 
