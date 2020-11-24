@@ -1,14 +1,18 @@
 import React from 'react'
-
-const MovieCard = () => {
+import { Movie } from '../types/Movie';
+interface IProps {
+  movie: Movie
+}
+const MovieCard = ({ movie: { title, overview, poster_path } }: IProps) => {
+  const basePath = 'https://image.tmdb.org/t/p/w500/';
   return (
     <li className="card">
       <figure>
-        <img src="https://image.tmdb.org/t/p/w500//rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg" alt="Thor Ragnarok" />
+        <img src={basePath + poster_path} alt={title} />
       </figure>
       <div className="info">
-        <h2>Thor Ragnarok</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, inventore? Quod minus sapiente sunt quam odit quis saepe fugiat repudiandae assumenda tempore adipisci impedit dicta, laborum possimus accusamus, consectetur dolorem?Magni sunt rerum, impedit harum maxime est aperiam quas saepe voluptas, quae illo voluptatem. Necessitatibus, deserunt. Tempora eligendi cupiditate provident. Repellendus tenetur beatae assumenda, sed placeat commodi recusandae doloribus sunt.</p>
+        <h2>{title}</h2>
+        <p>{overview}</p>
       </div>
     </li>
   )

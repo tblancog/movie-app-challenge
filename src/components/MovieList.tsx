@@ -1,10 +1,13 @@
 import React from 'react';
 import MovieCard from './MovieCard';
-
-const MovieList = () => {
+import { Movie } from '../types/Movie';
+interface IProps {
+  items: Array<Movie>
+}
+const MovieList = ({ items }: IProps) => {
   return (
     <ul>
-      {[1, 2, 3].map(item => (<MovieCard key={item} />))}
+      {items.map(item => (<MovieCard key={item.id} movie={item} />))}
     </ul>
   )
 }
