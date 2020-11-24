@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/movie-app-challenge/static/css/main.5fb1a70a.chunk.css",
-    "main.js": "/movie-app-challenge/static/js/main.a7f795c3.chunk.js",
-    "main.js.map": "/movie-app-challenge/static/js/main.a7f795c3.chunk.js.map",
+    "main.js": "/movie-app-challenge/static/js/main.3112e681.chunk.js",
+    "main.js.map": "/movie-app-challenge/static/js/main.3112e681.chunk.js.map",
     "runtime-main.js": "/movie-app-challenge/static/js/runtime-main.27c8c07d.js",
     "runtime-main.js.map": "/movie-app-challenge/static/js/runtime-main.27c8c07d.js.map",
     "static/js/2.2ff54b6d.chunk.js": "/movie-app-challenge/static/js/2.2ff54b6d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.27c8c07d.js",
     "static/js/2.2ff54b6d.chunk.js",
     "static/css/main.5fb1a70a.chunk.css",
-    "static/js/main.a7f795c3.chunk.js"
+    "static/js/main.3112e681.chunk.js"
   ]
 }
