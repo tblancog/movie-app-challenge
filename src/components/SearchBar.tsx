@@ -3,7 +3,10 @@ import React from 'react'
 const SearchBar = () => {
   return (
     <div>
-      SearchBar here
+      <div className="searchContainer">
+        <input type="text" placeholder="Enter keywords" />
+        <button>Search</button>
+      </div>
     </div>
   )
 }
