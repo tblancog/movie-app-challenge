@@ -6,8 +6,9 @@ import fetchMovies from './services/';
 import './App.css';
 function App() {
   const [movies, setMovies] = useState<Array<Movie>>([]);
+  const [loading, setLoading] = useState<Boolean>(false);
   useEffect(() => {
-    fetchMovies(setMovies);
+    fetchMovies(setMovies, setLoading);
   }, []);
   return (
     <div className="container">
@@ -15,6 +16,7 @@ function App() {
         <SearchBar />
       </header>
       <main>
+        {loading && (<h3>Loading...</h3>)}
         <MovieList items={movies} />
       </main>
     </div>
