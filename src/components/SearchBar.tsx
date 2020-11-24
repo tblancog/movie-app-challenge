@@ -22,6 +22,7 @@ const SearchBar = ({ items, handle }: IProps) => {
         <input type="text" placeholder="Enter keywords"
           value={query}
           onChange={e => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && search(e)}
         />
         <button onClick={e => search(e)}>Search</button>
       </div>
