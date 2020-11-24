@@ -13,7 +13,8 @@ function App() {
   return (
     <div className="container">
       <header>
-        <SearchBar />
+        <SearchBar items={movies}
+          handle={setMovies} />
       </header>
       <main>
         {loading && (<h3>Loading...</h3>)}
