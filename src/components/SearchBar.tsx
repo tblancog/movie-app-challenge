@@ -7,6 +7,15 @@ interface IProps {
 
 const SearchBar = ({ items, handle }: IProps) => {
   const [query, setQuery] = useState<string>('');
+  const search = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    if (query.length > 0) {
+      handle(items.filter(item => item.overview.match(
+        new RegExp(query, 'ig')
+      )));
+      setQuery('')
+    }
+  }
   return (
     <div>
       <div className="searchContainer">
@@ -14,7 +23,7 @@ const SearchBar = ({ items, handle }: IProps) => {
           value={query}
           onChange={e => setQuery(e.target.value)}
         />
-        <button>Search</button>
+        <button onClick={e => search(e)}>Search</button>
       </div>
     </div>
   )

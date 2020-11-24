@@ -18,6 +18,9 @@ function App() {
       </header>
       <main>
         {loading && (<h3>Loading...</h3>)}
+        {!loading && movies.length === 0 && (<h3>No matches for this search
+          <a href="/" onClick={() => fetchMovies(setMovies, setLoading)}> Clear search</a>
+        </h3>)}
         <MovieList items={movies} />
       </main>
     </div>
