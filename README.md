@@ -9,6 +9,11 @@ Clone this repo and use [npm](https://www.npmjs.com/get-npm) to install this app
 ```bash
 npm install
 ```
+Create a .env file to store TOKEN_ID
+```
+REACT_APP_ACCESS_TOKEN=<YOUR_TOKEN_ID>
+```
+
 
 To serve app in development mode:
 ```bash
